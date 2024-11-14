@@ -20,8 +20,8 @@
             <!-- logo Netflix -->
             <a class="navbar-brand " href="#">
                 <img class="img-fluid" src="assets/imgs/Netflix_Logo_RGB.png" alt="logo netflix" width="100"></a>
-                
-                <!-- aggiunta tasto hamburger -->
+
+            <!-- aggiunta tasto hamburger -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -202,8 +202,7 @@
 
             <!-- primo carosello -->
             <h4>Trending Now</h4>
-            <div class="overflow-hidden py-2 position-relative"
-                id="carousel-1">
+            <div class="d-flex flex-row flex-nowrap overflow-hidden gap-2 mb-5 py-2 position-relative" id="carousel">
                 <button class="nav-button prev" data-bs-target="#carousel-1" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-chevron-left" viewBox="0 0 16 16">
@@ -211,15 +210,24 @@
                             d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                     </svg>
                 </button>
-                <div class="d-flex gap-2 mb-5 pb-3 imagesWrapper" id="imagesWrapper">
-                    <img class="col p-0 rounded" id="img1" src="assets/imgs/movies/1.png" alt="Film-Unorthodox">
-                    <img class="col p-0 rounded" id="img2" src="assets/imgs/movies/2.png" alt="Film-After Life">
-                    <img class="col p-0 rounded" id="img3" src="assets/imgs/movies/3.png"
-                        alt="Film-Vis a Vis. Il prezzo del riscatto">
-                    <img class="col p-0 rounded" id="img4" src="assets/imgs/movies/4.png" alt="Film-The Place">
-                    <img class="col p-0 rounded" id="img5" src="assets/imgs/movies/5.png" alt="Film-Summertime">
-                    <img class="col p-0 rounded" id="img6" src="assets/imgs/movies/6.png"
-                        alt="Film-Delitti di Valhalla">
+                <div class="item d-flex">
+                    <img class="rounded-3" id="img1" src="assets/imgs/movies/1.png" alt="Film-Unorthodox">
+                </div>
+                <div class="item d-flex">
+                    <img class="rounded-3" id="img2" src="assets/imgs/movies/2.png" alt="Film-After Life">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" id="img3" src="assets/imgs/movies/3.png"
+                    alt="Film-Vis a Vis. Il prezzo del riscatto">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" id="img4" src="assets/imgs/movies/4.png" alt="Film-The Place">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" id="img5" src="assets/imgs/movies/5.png" alt="Film-Summertime">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" id="img6" src="assets/imgs/movies/6.png" alt="Film-Delitti di Valhalla">
                 </div>
                 <button class="nav-button next" data-bs-target="#carousel-1" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -228,12 +236,11 @@
                             d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                     </svg>
                 </button>
-
             </div>
 
             <!-- secondo carosello -->
             <h4>Watch It Again</h4>
-            <div class="row d-flex flex-nowrap overflow-hidden gap-2 mx-1 mb-5 py-2 position-relative" id="carousel-2">
+            <div class="d-flex flex-row flex-nowrap overflow-hidden gap-2 mb-5 py-2 position-relative" id="carousel">
                 <button class="nav-button prev" data-bs-target="#carousel-2" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-chevron-left" viewBox="0 0 16 16">
@@ -241,12 +248,24 @@
                             d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                     </svg>
                 </button>
-                <img class="col p-0 rounded" src="assets/imgs/movies/7.png" alt="Film-L'altra Grace">
-                <img class="col p-0 rounded" src="assets/imgs/movies/8.png" alt="Film-Virgin River">
-                <img class="col p-0 rounded" src="assets/imgs/movies/9.png" alt="Film-The English Game">
-                <img class="col p-0 rounded" src="assets/imgs/movies/10.png" alt="Film-Il Metodo Kominsky">
-                <img class="col p-0 rounded" src="assets/imgs/movies/11.png" alt="Film-PAtto d'Amore">
-                <img class="col p-0 rounded" src="assets/imgs/movies/12.png" alt="Film-La Casa de las Flores">
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/7.png" alt="Film-L'altra Grace">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/8.png" alt="Film-Virgin River">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/9.png" alt="Film-The English Game">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/10.png" alt="Film-Il Metodo Kominsky">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/11.png" alt="Film-PAtto d'Amore">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/12.png" alt="Film-La Casa de las Flores">
+                </div>
                 <button class="nav-button next" data-bs-target="#carousel-2" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-chevron-right" viewBox="0 0 16 16">
@@ -258,7 +277,7 @@
 
             <!-- terzo carosello -->
             <h4>New Releases</h4>
-            <div class="row d-flex flex-nowrap overflow-hidden gap-2 mx-1 mb-5 py-2 position-relative" id="carousel-3">
+            <div class="d-flex flex-row flex-nowrap overflow-hidden gap-2 mb-5 py-2 position-relative" id="carousel">
                 <button class="nav-button prev" data-bs-target="#carousel-3" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-chevron-left" viewBox="0 0 16 16">
@@ -266,13 +285,25 @@
                             d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                     </svg>
                 </button>
-                <img class="col p-0 rounded" src="assets/imgs/movies/13.png" alt="Film-Collateral Beauty">
-                <img class="col p-0 rounded" src="assets/imgs/movies/14.png"
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/13.png" alt="Film-Collateral Beauty">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/14.png"
                     alt="Film-Self-Made. La Vita di Madam C. J. Walker">
-                <img class="col p-0 rounded" src="assets/imgs/movies/15.png" alt="Film-Freud">
-                <img class="col p-0 rounded" src="assets/imgs/movies/16.png" alt="Film-Grace and Frankie">
-                <img class="col p-0 rounded" src="assets/imgs/movies/17.png" alt="Film-Lasciati Andare">
-                <img class="col p-0 rounded" src="assets/imgs/movies/18.png" alt="Film-Dogman">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/15.png" alt="Film-Freud">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/16.png" alt="Film-Grace and Frankie">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/17.png" alt="Film-Lasciati Andare">
+                </div>
+                <div class="item d-flex">
+                <img class="rounded-3" src="assets/imgs/movies/18.png" alt="Film-Dogman">
+                </div>
                 <button class="nav-button next" data-bs-target="#carousel-3" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-chevron-right" viewBox="0 0 16 16">
@@ -314,20 +345,20 @@
 
 
                 <div class="d-flex gap-5 flex-wrap">
-                    <ul class="col navbar-nav gap-2 opacity-50">
+                    <ul class="col navbar-nav gap-2 opacity-50 me-5 me-sm-0">
                         <li>Audio and Subtitles</li>
                         <li>Media Center</li>
                         <li>Privacy</li>
                         <li>Contact Us</li>
                     </ul>
 
-                    <ul class="col navbar-nav gap-2 opacity-50">
+                    <ul class="col navbar-nav gap-2 opacity-50 me-5 me-sm-0">
                         <li>Audio Description</li>
                         <li>Investor Relations</li>
                         <li>Legal Notices</li>
                     </ul>
 
-                    <ul class="col navbar-nav gap-2 opacity-50">
+                    <ul class="col navbar-nav gap-2 opacity-50 me-2 me-sm-0">
                         <li>Help Center</li>
                         <li>Jobs</li>
                         <li>Cookie Preferences</li>
