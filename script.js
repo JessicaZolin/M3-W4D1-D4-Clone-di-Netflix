@@ -1,3 +1,5 @@
+/* funzione per poter scorrere le immagini quando si clicca su next o prev */
+
 document.addEventListener("DOMContentLoaded", function () {
     // Funzione per aggiornare il carosello in base all'id
     function updateCarousel(carouselId, direction) {
@@ -5,13 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const items = carousel.querySelectorAll(".item");       // seleziona tutti gli elementi (.item) al suo interno
         const containerWidth = carousel.offsetWidth;            // calcola la lunghezza in px del carosello
         const style = window.getComputedStyle(items[0]);        // ottiene lo stile computato dell'elemento (width+gap+margin...)   
-        const gapRight = parseInt(style.marginRight, 10) || 0;  // estrapola in stringa il valore del margine e lo converte il valore in numero
-        const gapLeft = parseInt(style.marginLeft, 10) || 0;    // estrapola in stringa il valore del margine e lo converte il valore in numero        
-        const itemWidth = items[0].offsetWidth + gapRight + gapLeft; // Larghezza immagine + gap
+        const gapRight = parseInt(style.marginRight, 10) || 0;  // estrapola in stringa il valore del margine e lo converte in numero
+        const gapLeft = parseInt(style.marginLeft, 10) || 0;    // estrapola in stringa il valore del margine e lo converte in numero        
+        const itemWidth = items[0].offsetWidth + gapRight + gapLeft; // Larghezza immagine + gap 
 
-        const maxIndex = Math.ceil(items.length-containerWidth/itemWidth); // arrotonda a nuemro intero più vicino il risultato (num. item - item visibili)
+        const maxIndex = Math.ceil(items.length - containerWidth / itemWidth);          // arrotonda a nuemro intero più vicino il risultato (num. item - item visibili) per fare in modo che scossa solo fino alla visibilità dell'ultima immagine e non oltre
 
-        let currentIndex = parseInt(carousel.getAttribute("data-current-index")) || 0; // memorizza la posizione corrente del carosello
+        let currentIndex = parseInt(carousel.getAttribute("data-current-index")) || 0;  // memorizza la posizione corrente del carosello
 
         // Aggiorna l'indice corrente in base alla direzione
         if (direction === "next" && currentIndex < maxIndex) {
@@ -21,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Imposta l'offset per il carosello
-        const offset = -currentIndex * itemWidth;           // calcola la distanza di traslazione orizzontale del carosello
+        const offset = -currentIndex * itemWidth;                           // calcola la distanza di traslazione orizzontale del carosello
         items.forEach((item) => {
             item.style.transform = `translateX(${offset}px)`;
         });
@@ -39,3 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+
+
+
+
+
+
+/* funzione per ricaricare l apagina al click del pulsante Search in ricerca */
+
+document.getElementById("searchButton").addEventListener("click", function () {
+    location.reload();                                                              // per ricaricare la pagina corrente
+} )
