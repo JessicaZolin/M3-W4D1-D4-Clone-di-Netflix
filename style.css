@@ -1,3 +1,8 @@
+.dropdown-menu-dark {
+    background-color: rgba(0, 0, 0, 0.78);
+    border: solid 2px;
+}
+
 main {
     .nav-button {
         display: flex;
@@ -12,23 +17,34 @@ main {
     }
 
     .prev {
-        top: 2.5rem;
-        left: -2rem;
+        top: 3rem;
+        left: -1.5rem;
         z-index: 5;
     }
 
     .next {
-        top: 2.5rem;
+        top: 3rem;
         right: -2rem;
         z-index: 5;
     }
 
-    #carousel-1:hover .prev, #carousel-2:hover .prev, #carousel-3:hover .prev {
+    .item {
+        width: 301px;
+        height: 165px;
+
+        img {
+            width: 301px;
+            object-fit: contain;
+            
+        }
+    }
+
+    .carousel:hover .prev {
         transform: translateX(100%);
         transition: transform 0.5s;
     }
 
-    #carousel-1:hover .next, #carousel-2:hover .next, #carousel-3:hover .next{
+    .carousel:hover .next{
         transform: translateX(-100%);
         transition: transform 0.5s;
     }
@@ -39,6 +55,6 @@ main {
     }
 
     img:hover {
-        transform: scale(1.05);
+        transform: scale(1.10);
     }
 }
