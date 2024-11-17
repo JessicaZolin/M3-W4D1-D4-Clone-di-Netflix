@@ -1,3 +1,38 @@
+/* Funzione per popolare una riga di film */
+
+function populateMovieRow(rowId, start, end) {
+    const row = document.getElementById(rowId);
+    for (let i = start; i <= end; i++) {
+        const imagePath = `assets/imgs/movies/${i}.png`;
+        const card = createMovieCard(imagePath, i, i === start);
+        row.appendChild(card);
+    }
+}
+
+/* Funzione per creare una card del film */
+function createMovieCard(imagePath, i, isFirst) {
+    const card = document.createElement('div');
+    card.className = "item d-flex";
+    if (isFirst) {                                              // Aggiungi la classe ms-2 al primo elemento
+        card.classList.add("ms-2"); 
+    }
+    card.innerHTML = `<img class="rounded-3" id="img${i}" type="button" data-bs-toggle="modal" data-bs-target="#film${i}" src="${imagePath}" alt="Movie Thumbnail-${i}">`;
+    return card;
+}
+
+/* Popolamento delle righe */
+document.addEventListener("DOMContentLoaded", () => {
+    populateMovieRow("carousel-1", 1, 6);
+    populateMovieRow("carousel-2", 7, 12);
+    populateMovieRow("carousel-3", 13, 18); 
+}); 
+
+
+
+
+
+
+
 /* funzione per poter scorrere le immagini quando si clicca su next o prev */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -53,4 +88,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.getElementById("searchButton").addEventListener("click", function () {
     location.reload();                                                              // per ricaricare la pagina corrente
-} )
+})
