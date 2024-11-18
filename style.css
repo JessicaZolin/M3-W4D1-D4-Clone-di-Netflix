@@ -13,7 +13,7 @@ main {
         position: absolute;
         background-color: rgba(0, 0, 0, 0.7);
         border: 0;
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 1);
     }
 
     .prev {
@@ -29,11 +29,11 @@ main {
     }
 
     .item {
-        width: 301px;
+        width: 300px;
         height: 165px;
 
         img {
-            width: 301px;
+            width: 300px;
             object-fit: contain;
             
         }
@@ -52,9 +52,11 @@ main {
     img {
         width: 75%;
         transition: transform 0.3s ease;
+        
     }
 
     img:hover {
         transform: scale(1.10);
+
     }
 }
