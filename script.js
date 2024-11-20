@@ -1,4 +1,40 @@
-/* Funzione per popolare una riga di film */
+/* Funzione per popolare una riga di film del carosello per schermo small */
+
+function populateCarouselSmall(rowId, start, end) {
+    const row = document.getElementById(rowId);                     // richiama il div dove inserire le foto del carosello
+    
+    const carouselInner = document.createElement ("div");           // crea div contenitore generale immagini carosello
+    carouselInner.className = "carousel-inner"
+    row.insertBefore(carouselInner, row.children[0])
+
+    for (let i = start; i <= end; i++) {                            // cicla e crea le card per ogni carosello 
+        const imagePath = `assets/imgs/movies/${i}.png`;            // prende l'immagine dalla cartella
+        const item = document.createElement("div");                 // crea il contenitore della singola immagine
+        item.className = "carousel-item"
+        if (i === start) {                                              // Aggiungi la classe "active" solo al primo elemento
+            item.classList.add("active");
+        }
+        item.innerHTML = `<img class="d-block w-100" id="img${i}" type="button" data-bs-toggle="modal" data-bs-target="#film${i}" src="${imagePath}" alt="Movie Thumbnail-${i}">`;
+        
+        carouselInner.appendChild(item);
+    }
+}
+
+/* Popolamento delle righe */
+document.addEventListener("DOMContentLoaded", () => {
+    populateCarouselSmall("carouselSmall-1", 1, 6);
+    populateCarouselSmall("carouselSmall-2", 7, 12);
+    populateCarouselSmall("carouselSmall-3", 13, 18);
+});
+
+
+
+
+
+
+
+
+/* Funzione per popolare una riga di film del carosello per schermo da medium in su */
 
 function populateMovieRow(rowId, start, end) {
     const row = document.getElementById(rowId);                     // richiama il div dove inserire le foto del carosello
@@ -43,11 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     populateMovieRow("carousel-2", 7, 12);
     populateMovieRow("carousel-3", 13, 18);
 });
-
-
-
-
-/* Funzione per popolare le schede descrittive dei film */
 
 
 
