@@ -2,18 +2,21 @@
 
 function populateMovieRow(rowId, start, end) {
     const row = document.getElementById(rowId);                     // richiama il div dove inserire le foto del carosello
+    
     const buttonPrev = document.createElement("button")             // crea il primo bottone: prev
     buttonPrev.className = "nav-button prev"
-    buttonPrev.setAttribute("data-bs-target", "#carousel-1")
+    buttonPrev.setAttribute("data-bs-target", `#${rowId}`)
     buttonPrev.setAttribute("type", "button")
     buttonPrev.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" /></svg>'
     row.appendChild(buttonPrev)
+    
     const buttonNext = document.createElement("button")             // crea il secondo bottone: next
     buttonNext.className = "nav-button next"
-    buttonNext.setAttribute("data-bs-target", "#carousel-1")
+    buttonNext.setAttribute("data-bs-target", `#${rowId}`)
     buttonNext.setAttribute("type", "button")
     buttonNext.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" /></svg>'
     row.appendChild(buttonNext)
+    
     for (let i = start; i <= end; i++) {                           // cicla e crea le card per ogni carosello 
         const imagePath = `assets/imgs/movies/${i}.png`;           // prende l'immagine dalla cartella
         const card = createMovieCard(imagePath, i, i === start);   // crea la card avviando la funzione sottostante
